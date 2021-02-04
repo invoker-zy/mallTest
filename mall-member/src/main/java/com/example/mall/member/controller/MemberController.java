@@ -33,7 +33,7 @@ public class MemberController {
     private MemberService memberService;
 
     @Autowired
-    private CouponFeignService couponFeignService;
+    CouponFeignService couponFeignService;
 
     @RequestMapping("/coupons")
     public R test(){

@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: io.renren.RenrenApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.163 s <<< FAILURE! - in io.renren.RenrenApplicationTests
-contextLoads  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalArgumentException: Could not find class [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration]
-Caused by: java.lang.ClassNotFoundException: org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
-
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.183 s - in io.renren.RenrenApplicationTests
