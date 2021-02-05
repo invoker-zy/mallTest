@@ -76,5 +76,6 @@
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-commons:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-context:2.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2.2.4.RELEASE" level="project" />
   </component>
 </module>
