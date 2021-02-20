@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +18,6 @@ import com.example.mall.coupon.service.CouponService;
 import com.example.common.utils.PageUtils;
 import com.example.common.utils.R;
 
-
-
 /**
  * 优惠券信息
  *
@@ -24,12 +25,22 @@ import com.example.common.utils.R;
  * @email zhangzy@gmail.com
  * @date 2021-01-29 15:08:57
  */
+@RefreshScope(proxyMode = ScopedProxyMode.DEFAULT)//刷新配置文件,再次读取nacos上的配置文件,获取最新的配置
 @RestController
 @RequestMapping("coupon/coupon")
 public class CouponController {
     @Autowired
     private CouponService couponService;
 
+    @Value("${userTest.name}")
+    private String name;
+    @Value("${userTest.age}")
+    private Integer age;
+
+    @RequestMapping("/test")
+    private R test(){
+        return R.ok().put("name",name).put("age",age);
+    }
     /**
      * 优惠券例子
      * @return
